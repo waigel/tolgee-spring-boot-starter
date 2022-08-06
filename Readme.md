@@ -1,6 +1,6 @@
 ## tolgee-spring-boot-starter
 
-This spring boot library in kotlin, integrate the i18n platform into spring-boot to provide translations.
+This spring-boot library in kotlin, integrate the i18n platform tolgee into spring-boot to provide translations.
 
 This library provides translations from tolgee to spring boot.
 Important for e-mails or notifications that are created on the backend and sent to the customer.
