@@ -1,0 +1,83 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'signing'
+}
+
+group = "com.waigel.tolgee"
+version = "1.0.0"
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web:2.7.2"
+    // to convert json
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation "com.google.code.gson:gson:2.9.1"
+
+    // test frameworks
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test
+    testImplementation "org.springframework.boot:spring-boot-starter-test:2.7.2"
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:5.9.0"
+    // https://mvnrepository.com/artifact/org.mockito/mockito-core
+    testImplementation "org.mockito:mockito-core:4.6.1"
+    // https://mvnrepository.com/artifact/io.mockk/mockk
+    testImplementation "io.mockk:mockk:1.12.5"
+
+
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'tolgee-spring-boot-starter'
+            from components.java
+
+            pom {
+                name = 'tolgee-spring-boot-starter'
+                description = 'This spring-boot library in kotlin, integrate the i18n platform tolgee into spring-boot to provide translations.'
+                url = 'https://github.com/waigel/tolgee-spring-boot-starter'
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://github.com/waigel/tolgee-spring-boot-starter/blob/main/LICENSE'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'waigel'
+                        name = 'Johannes Waigel'
+                        email = 'johannes@waigel.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/waigel/tolgee-spring-boot-starter.git'
+                    developerConnection = 'scm:git:ssh://github.com/waigel/tolgee-spring-boot-starter.git'
+                    url = 'https://github.com/waigel/tolgee-spring-boot-starter'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username = "$NEXUS_USERNAME"
+                password = "$NEXUS_PASSWORD"
+            }
+            name = "maven-central"
+            url = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
+
