@@ -1,0 +1,32 @@
+{
+  "properties": [
+    {
+      "name": "tolgee.enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "name": "tolgee.api-key",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "tolgee.api-url",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "tolgee.force-language",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "tolgee.default-language",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "tolgee.sync.enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "name": "tolgee.sync.interval",
+      "type": "java.lang.Long"
+    }
+  ]
+}
