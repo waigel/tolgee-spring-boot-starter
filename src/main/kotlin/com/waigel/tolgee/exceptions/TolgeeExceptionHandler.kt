@@ -1,6 +1,5 @@
 package com.waigel.tolgee.exceptions
 
-import org.apache.tomcat.util.http.fileupload.IOUtils
 import org.springframework.http.client.ClientHttpResponse
 import org.springframework.web.client.DefaultResponseErrorHandler
 import java.io.IOException

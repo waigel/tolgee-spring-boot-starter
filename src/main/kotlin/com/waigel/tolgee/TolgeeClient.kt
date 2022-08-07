@@ -2,11 +2,9 @@ package com.waigel.tolgee
 
 
 import com.waigel.tolgee.configuration.TolgeeConfiguration
-import com.waigel.tolgee.exceptions.TolgeeExceptionHandler
 import com.waigel.tolgee.exceptions.TolgeeRequestForbiddenException
 import com.waigel.tolgee.models.ExportParams
 import com.waigel.tolgee.utils.ExportConverter
-import org.slf4j.LoggerFactory
 import org.springframework.http.HttpMethod
 import org.springframework.http.client.ClientHttpRequest
 import org.springframework.http.client.ClientHttpResponse

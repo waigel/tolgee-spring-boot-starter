@@ -3,7 +3,6 @@ package com.waigel.tolgee
 import com.waigel.tolgee.configuration.TolgeeConfiguration
 import com.waigel.tolgee.configuration.TolgeeSyncConfiguration
 import org.slf4j.LoggerFactory
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty
 import org.springframework.scheduling.annotation.Scheduled
 import java.util.regex.Matcher
 import java.util.regex.Pattern
