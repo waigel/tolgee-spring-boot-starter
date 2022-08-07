@@ -5,6 +5,12 @@ This spring-boot library in kotlin, integrate the i18n platform tolgee into spri
 This library provides translations from tolgee to spring boot.
 Important for e-mails or notifications that are created on the backend and sent to the customer.
 
+## Installation
+
+```gradle
+implementation("com.waigel.tolgee:tolgee-spring-boot-starter")
+```
+
 ## Example
 
 ```kotlin
